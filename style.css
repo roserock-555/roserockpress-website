@@ -1,0 +1,104 @@
+:root {
+  --bg: #faf6f1;
+  --text: #2b211d;
+  --muted: #6f5f57;
+  --accent: #9a4a3c;
+  --rule: #e3d8cd;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1614;
+    --text: #efe6dd;
+    --muted: #b3a297;
+    --accent: #dc9482;
+    --rule: #3a2f2a;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 64px 16px 48px;
+}
+
+/* Home page: center the short block of text in the window. */
+main.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-top: 48px;
+}
+
+.mark {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 24px;
+  color: var(--accent);
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: 2.2rem;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+main.home h1 { font-size: 2.6rem; }
+
+h2 {
+  margin: 40px 0 8px;
+  font-size: 1.2rem;
+}
+
+p, ul { margin: 0 0 16px; }
+
+ul { padding-left: 22px; }
+
+.lede { color: var(--muted); }
+
+.updated {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+a { color: var(--accent); }
+
+a:hover, a:focus { text-decoration-thickness: 2px; }
+
+.contact {
+  margin-top: 24px;
+  font-size: 1.15rem;
+}
+
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 20px 16px 28px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+footer p { margin: 0 0 6px; }
+
+footer a { color: var(--muted); }
